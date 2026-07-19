@@ -17,4 +17,7 @@ group = df.groupby("bedrooms")
 av_price = group["price"].mean()
 print(av_price)
 
-# Bedrooms vs price
+#Best value suburbs
+group = df.groupby("suburb")
+least_dist = group["distance_from_cbd_km"].max()
+print(least_dist)
